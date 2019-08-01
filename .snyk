@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - gh-release > gh-release-assets > request > extend:
+        patched: '2019-08-01T19:32:24.300Z'
+    - gh-release > request > extend:
+        patched: '2019-08-01T19:32:24.300Z'
