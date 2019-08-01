@@ -12,16 +12,17 @@
   ],
   "dependencies": {
     "@types/geojson": "^1.0.0",
-    "terraformer": "~1.0.5"
+    "terraformer": "~1.0.5",
+    "snyk": "^1.208.0"
   },
   "devDependencies": {
-    "gh-release": "^3.2.1",
-    "grunt": "^1.0.3",
-    "grunt-contrib-jasmine": "^2.0.1",
+    "gh-release": "^3.3.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-jasmine": "^2.1.0",
     "grunt-contrib-uglify": "~2.0.0",
     "grunt-template-jasmine-istanbul": "~0.2.4",
     "grunt-vows": "~0.4.0",
-    "jasmine": "^2.8.0",
+    "jasmine": "^3.1.0",
     "jison": "~0.3.12",
     "mkdirp": "^0.5.1",
     "tslint": "^4.5.1",
@@ -49,13 +50,15 @@
     "url": "git@github.com:Esri/terraformer-wkt-parser.git"
   },
   "scripts": {
-    "prepare": "grunt wkt-parser && grunt uglify",
+    "prepare": "npm run snyk-protect && grunt wkt-parser && grunt uglify",
     "test": "npm run test:node && grunt test",
     "test:node": "jasmine --config=jasmine.json",
     "test:ts": "tslint test.ts terraformer-wkt-parser.d.ts && tsc -p tsconfig.json && node test.js",
-    "release": "./release.sh"
+    "release": "./release.sh",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=4.2.6"
-  }
+  },
+  "snyk": true
 }
