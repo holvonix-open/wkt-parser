@@ -15,7 +15,7 @@
     "terraformer": "~1.0.5"
   },
   "devDependencies": {
-    "gh-release": "^3.2.1",
+    "gh-release": "^3.5.0",
     "grunt": "^1.0.3",
     "grunt-contrib-jasmine": "^2.0.1",
     "grunt-contrib-uglify": "~2.0.0",
