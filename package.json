@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "@types/geojson": "^1.0.0",
-    "terraformer": "~1.0.5"
+    "terraformer": "~1.0.9"
   },
   "devDependencies": {
     "gh-release": "^3.2.1",
